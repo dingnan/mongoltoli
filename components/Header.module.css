@@ -14,6 +14,7 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -43,7 +44,6 @@
   background-clip: text;
   writing-mode: vertical-lr;
   text-orientation: sideways;
-  transform: rotate(180deg);
 }
 
 .logoText {

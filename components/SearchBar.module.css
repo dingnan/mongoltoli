@@ -139,7 +139,6 @@
     color: var(--accent-primary);
     writing-mode: vertical-lr;
     text-orientation: sideways;
-    transform: rotate(180deg);
     padding: 0.25rem 0.5rem;
     background: rgba(99, 102, 241, 0.1);
     border-radius: 8px;
