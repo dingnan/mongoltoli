@@ -25,12 +25,6 @@
     text-align: center;
 }
 
-.resultsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
 .resultCard {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
     backdrop-filter: blur(10px);

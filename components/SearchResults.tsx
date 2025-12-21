@@ -38,7 +38,7 @@ export default function SearchResults({ results }: SearchResultsProps) {
     return (
         <div className={styles.resultsContainer}>
             <h2 className={styles.resultsTitle}>Search Results ({results.length})</h2>
-            <div className={styles.resultsGrid}>
+            <div>
                 {results.map((entry, index) => (
                     <div
                         key={entry.id}
