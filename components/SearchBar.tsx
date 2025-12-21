@@ -8,8 +8,15 @@ interface DictionaryEntry {
     mongolian: string;
     cyrillic: string;
     english: string;
+    definition: string;
     partOfSpeech?: string;
     examples?: string;
+    spellout?: string;
+    englishPronunciation?: string;
+    root?: string;
+    synonym?: string;
+    antonym?: string;
+    lookAlikes?: string;
 }
 
 interface SearchBarProps {
