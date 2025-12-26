@@ -30,6 +30,7 @@ export default function SearchBar({ onResults }: SearchBarProps) {
     const [results, setResults] = useState<DictionaryEntry[]>([]);
     const debounceTimer = useRef<NodeJS.Timeout | null>(null);
     const searchRef = useRef<HTMLDivElement>(null);
+    const isSelectingItem = useRef(false);
 
     useEffect(() => {
         // Handle clicks outside to close dropdown
@@ -68,18 +69,18 @@ export default function SearchBar({ onResults }: SearchBarProps) {
                 // Check if the response is an array (successful) or an error object
                 if (Array.isArray(data)) {
                     setResults(data);
-                    setShowDropdown(true);
-                    onResults(data);
+                    // Only show dropdown if we're not in the process of selecting an item
+                    if (!isSelectingItem.current) {
+                        setShowDropdown(true);
+                    }
                 } else {
                     // Handle error response
                     console.error('Search error:', data.error || 'Unknown error');
                     setResults([]);
-                    onResults([]);
                 }
             } catch (error) {
                 console.error('Search failed:', error);
                 setResults([]);
-                onResults([]);
             } finally {
                 setIsLoading(false);
             }
@@ -93,9 +94,15 @@ export default function SearchBar({ onResults }: SearchBarProps) {
     }, [query, onResults]);
 
     const handleResultClick = (result: DictionaryEntry) => {
+        isSelectingItem.current = true;
         setQuery(result.cyrillic);
         setShowDropdown(false);
         onResults([result]);
+
+        // Reset the flag after a short delay to allow normal dropdown behavior for new searches
+        setTimeout(() => {
+            isSelectingItem.current = false;
+        }, 500);
     };
 
     return (
