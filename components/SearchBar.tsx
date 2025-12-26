@@ -130,7 +130,10 @@ export default function SearchBar({ onResults }: SearchBarProps) {
                     placeholder="Search in Cyrillic or Mongolian..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    onFocus={() => results.length > 0 && setShowDropdown(true)}
+                    onFocus={(e) => {
+                        e.target.select(); // Auto-select all text
+                        results.length > 0 && setShowDropdown(true);
+                    }}
                 />
                 {isLoading && (
                     <div className={styles.loader}>
