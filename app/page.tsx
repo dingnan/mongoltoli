@@ -8,19 +8,27 @@ import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
 interface DictionaryEntry {
-  id: number;
-  mongolian: string;
-  cyrillic: string;
-  english: string;
-  definition: string;
-  partOfSpeech?: string;
-  examples?: string;
-  spellout?: string;
-  englishPronunciation?: string;
-  root?: string;
-  synonym?: string;
-  antonym?: string;
-  lookAlikes?: string;
+  toli_id: number;
+  toli_m: string;         // Mongolian
+  toli_k: string;         // Cyrillic
+  toli_ue: string;        // Romanization
+  toli_we: string;        // International Phonetic Alphabet
+  toli_le?: string;       // Romanization pronunciation
+  toli_aimag?: string;    // Part of speech
+  toli_chmog?: string;    // Group
+  toli_ijauur?: string;   // Original character
+  toli_uo?: string;       // Synonyms
+  toli_eo?: string;       // Antonym
+  toli_to?: string;       // Pictographs
+  toli_sound?: number;    // Pronunciation code, same as toli_id
+  z_code?: string;        // Z code
+  toli_todo?: string;     // Todo Mongolian
+  toli_text?: string;     // Explanation (Long Article)
+  toli_image?: string;    // Image name
+  toli_order?: number;    // Order
+  toli_del?: boolean;     // Delete flag
+  toli_created: Date;
+  toli_modified: Date;
 }
 
 export default function Home() {

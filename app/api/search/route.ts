@@ -15,18 +15,18 @@ export async function GET(request: NextRequest) {
             where: {
                 OR: [
                     {
-                        cyrillic: {
+                        toli_k: {
                             contains: query,
                             mode: 'insensitive',
                         },
                     },
                     {
-                        mongolian: {
+                        toli_m: {
                             contains: query,
                         },
                     },
                     {
-                        english: {
+                        toli_text: {
                             contains: query,
                             mode: 'insensitive',
                         },
@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
             },
             take: 10, // Limit results to 10
             orderBy: {
-                cyrillic: 'asc',
+                toli_k: 'asc',
             },
         });
 
