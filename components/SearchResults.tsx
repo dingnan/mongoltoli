@@ -64,7 +64,7 @@ export default function SearchResults({ results }: SearchResultsProps) {
                         </div>
 
                         <div className={styles.detailsGrid}>
-                            {renderDetail('ᠦᠶᠡᠴᠢᠯᠡᠭᠰᠡᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_le)}
+                            {renderDetail('ᠯᠠᠲ᠋ᠢᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_le)}
                             {renderDetail('ᠳᠡᠯᠡᠬᠡᠢ ᠭᠠᠯᠢᠭ᠋', entry.toli_we)}
                             {renderDetail('ᠢᠵᠠᠭᠤᠷ', entry.toli_ijauur)}
                             {renderDetail('ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠤᠳᠬ᠎ᠠ', entry.toli_uo)}
@@ -73,9 +73,10 @@ export default function SearchResults({ results }: SearchResultsProps) {
                             {renderDetail('Zᠺᠣᠳ᠋', entry.z_code)}
                             {renderDetail('ᠲᠣᠳᠣ᠌', entry.toli_todo)}
                             {renderDetail('ᠴᠣᠮᠣᠭ', entry.toli_chmog)}
+                            {renderDetail('ᠦᠶᠡᠴᠢᠯᠡᠭᠰᠡᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_ue)}
                         </div>
 
-                        {entry.toli_chmog && (
+                        {entry.toli_text && (
                             <div className={styles.examples}>
                                 <strong>ᠲᠠᠢᠯᠪᠤᠷᠢ</strong> {entry.toli_text}
                             </div>
