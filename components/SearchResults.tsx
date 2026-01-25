@@ -1,19 +1,27 @@
 import styles from './SearchResults.module.css';
 
 interface DictionaryEntry {
-    id: number;
-    mongolian: string;
-    cyrillic: string;
-    english: string;
-    definition: string;
-    partOfSpeech?: string;
-    examples?: string;
-    spellout?: string;
-    englishPronunciation?: string;
-    root?: string;
-    synonym?: string;
-    antonym?: string;
-    lookAlikes?: string;
+    toli_id: number;
+    toli_m: string;         // Mongolian
+    toli_k: string;         // Cyrillic
+    toli_ue: string;        // Romanization
+    toli_we: string;        // International Phonetic Alphabet
+    toli_le?: string;       // Romanization pronunciation
+    toli_aimag?: string;    // Part of speech
+    toli_chmog?: string;    // Group
+    toli_ijauur?: string;   // Original character
+    toli_uo?: string;       // Synonyms
+    toli_eo?: string;       // Antonym
+    toli_to?: string;       // Pictographs
+    toli_sound?: number;    // Pronunciation code, same as toli_id
+    z_code?: string;        // Z code
+    toli_todo?: string;     // Todo Mongolian
+    toli_text?: string;     // Explanation (Long Article)
+    toli_image?: string;    // Image name
+    toli_order?: number;    // Order
+    toli_del?: boolean;     // Delete flag
+    toli_created: Date;
+    toli_modified: Date;
 }
 
 interface SearchResultsProps {
@@ -41,35 +49,35 @@ export default function SearchResults({ results }: SearchResultsProps) {
             <div>
                 {results.map((entry, index) => (
                     <div
-                        key={entry.id}
+                        key={entry.toli_id}
                         className={styles.resultCard}
                         style={{ animationDelay: `${index * 0.1}s` }}
                     >
                         <div className={styles.cardHeader}>
-                            <div className={styles.mongolianText}>{entry.mongolian}</div>
+                            <div className={styles.mongolianText}>{entry.toli_m}</div>
                             <div className={styles.mainInfo}>
-                                <h3 className={styles.cyrillicText}>{entry.cyrillic}</h3>
-                                {entry.partOfSpeech && (
-                                    <span className={styles.partOfSpeech}>{entry.partOfSpeech}</span>
+                                <h3 className={styles.cyrillicText}>{entry.toli_k}</h3>
+                                {entry.toli_aimag && (
+                                    <span className={styles.partOfSpeech}>{entry.toli_aimag}</span>
                                 )}
                             </div>
                         </div>
 
-                        <div className={styles.englishText}>{entry.english}</div>
-
                         <div className={styles.detailsGrid}>
-                            {renderDetail('Definition', entry.definition)}
-                            {renderDetail('Spellout', entry.spellout)}
-                            {renderDetail('Pronunciation', entry.englishPronunciation)}
-                            {renderDetail('Root', entry.root)}
-                            {renderDetail('Synonyms', entry.synonym)}
-                            {renderDetail('Antonyms', entry.antonym)}
-                            {renderDetail('Look-alikes', entry.lookAlikes)}
+                            {renderDetail('ᠦᠶᠡᠴᠢᠯᠡᠭᠰᠡᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_le)}
+                            {renderDetail('ᠳᠡᠯᠡᠬᠡᠢ ᠭᠠᠯᠢᠭ᠋', entry.toli_we)}
+                            {renderDetail('ᠯᠠᠲ᠋ᠢᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_ijauur)}
+                            {renderDetail('ᠴᠣᠮᠣᠭ', entry.toli_uo)}
+                            {renderDetail('ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠤᠳᠬ᠎ᠠ', entry.toli_eo)}
+                            {renderDetail('ᠡᠰᠡᠷᠭᠦ ᠤᠳᠬ᠎ᠠ', entry.toli_to)}
+                            {renderDetail('Zᠺᠣᠳ᠋', entry.z_code)}
+                            {renderDetail('ᠲᠣᠳᠣ᠌', entry.toli_todo)}
+                            {renderDetail('ᠲᠠᠢᠯᠪᠤᠷᠢ', entry.toli_chmog)}
                         </div>
 
-                        {entry.examples && (
+                        {entry.toli_chmog && (
                             <div className={styles.examples}>
-                                <strong>Example:</strong> {entry.examples}
+                                <strong>ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠳᠦᠷᠰᠦ</strong> {entry.toli_text}
                             </div>
                         )}
                     </div>

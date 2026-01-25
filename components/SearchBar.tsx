@@ -4,19 +4,27 @@ import { useState, useEffect, useRef } from 'react';
 import styles from './SearchBar.module.css';
 
 interface DictionaryEntry {
-    id: number;
-    mongolian: string;
-    cyrillic: string;
-    english: string;
-    definition: string;
-    partOfSpeech?: string;
-    examples?: string;
-    spellout?: string;
-    englishPronunciation?: string;
-    root?: string;
-    synonym?: string;
-    antonym?: string;
-    lookAlikes?: string;
+    toli_id: number;
+    toli_m: string;         // Mongolian
+    toli_k: string;         // Cyrillic
+    toli_ue: string;        // Romanization
+    toli_we: string;        // International Phonetic Alphabet
+    toli_le?: string;       // Romanization pronunciation
+    toli_aimag?: string;    // Part of speech
+    toli_chmog?: string;    // Group
+    toli_ijauur?: string;   // Original character
+    toli_uo?: string;       // Synonyms
+    toli_eo?: string;       // Antonym
+    toli_to?: string;       // Pictographs
+    toli_sound?: number;    // Pronunciation code, same as toli_id
+    z_code?: string;        // Z code
+    toli_todo?: string;     // Todo Mongolian
+    toli_text?: string;     // Explanation (Long Article)
+    toli_image?: string;    // Image name
+    toli_order?: number;    // Order
+    toli_del?: boolean;     // Delete flag
+    toli_created: Date;
+    toli_modified: Date;
 }
 
 interface SearchBarProps {
@@ -95,7 +103,7 @@ export default function SearchBar({ onResults }: SearchBarProps) {
 
     const handleResultClick = (result: DictionaryEntry) => {
         isSelectingItem.current = true;
-        setQuery(result.cyrillic);
+        setQuery(result.toli_k);
         setShowDropdown(false);
         onResults([result]);
 
@@ -146,18 +154,17 @@ export default function SearchBar({ onResults }: SearchBarProps) {
                 <div className={styles.dropdown}>
                     {results.map((result, index) => (
                         <div
-                            key={result.id}
+                            key={result.toli_id}
                             className={styles.dropdownItem}
                             onClick={() => handleResultClick(result)}
                             style={{ animationDelay: `${index * 0.05}s` }}
                         >
                             <div className={styles.resultMain}>
-                                <span className={styles.resultCyrillic}>{result.cyrillic}</span>
-                                <span className={styles.resultMongolian}>{result.mongolian}</span>
+                                <span className={styles.resultCyrillic}>{result.toli_k}</span>
+                                <span className={styles.resultMongolian}>{result.toli_m}</span>
                             </div>
-                            <div className={styles.resultEnglish}>{result.english}</div>
-                            {result.partOfSpeech && (
-                                <span className={styles.partOfSpeech}>{result.partOfSpeech}</span>
+                            {result.toli_aimag && (
+                                <span className={styles.partOfSpeech}>{result.toli_aimag}</span>
                             )}
                         </div>
                     ))}
