@@ -10,22 +10,28 @@ datasource db {
 }
 
 model DictionaryEntry {
-  id                    Int              @id @default(autoincrement())
-  mongolian             String
-  cyrillic              String
-  english               String
-  definition            String           // Definition
-  spellout              String?          // Letter-by-letter pronunciation
-  englishPronunciation  String?          // English pronunciation guide
-  partOfSpeech          String?          // noun, verb, adjective, etc.
-  root                  String?          // Word root/etymology
-  synonym               String?          // Synonyms (comma-separated or JSON)
-  antonym               String?          // Antonyms (comma-separated or JSON)
-  lookAlikes            String?          // Similar looking words (comma-separated or JSON)
-  examples              String?          // Usage examples
-  createdAt             DateTime         @default(now())
-  updatedAt             DateTime         @updatedAt
+  toli_id        Int       @id @default(autoincrement())
+  toli_m         String    // Mongolian
+  toli_k         String    // Cyrillic
+  toli_ue        String    // Romanization
+  toli_we        String    // International Phonetic Alphabet
+  toli_le        String?   // Romanization pronunciation
+  toli_aimag     String?   // Part of speech
+  toli_chmog     String?   // Group
+  toli_ijauur    String?   // Original character
+  toli_uo        String?   // Synonyms
+  toli_eo        String?   // Antonym
+  toli_to        String?   // Pictographs
+  toli_sound     Int?      // Pronunciation code, same as toli_id
+  z_code         String?   // Z code
+  toli_todo      String?   // Todo Mongolian
+  toli_text      String?   // Explanation (Long Article)
+  toli_image     String?   // Image name
+  toli_order     Int?      // Order
+  toli_del       Boolean?  // Delete flag
+  toli_created   DateTime  @default(now())
+  toli_modified  DateTime  @updatedAt
 
-  @@index([cyrillic])
-  @@index([mongolian])
+  @@index([toli_k])
+  @@index([toli_m])
 }
