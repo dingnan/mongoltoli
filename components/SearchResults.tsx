@@ -66,18 +66,18 @@ export default function SearchResults({ results }: SearchResultsProps) {
                         <div className={styles.detailsGrid}>
                             {renderDetail('ᠦᠶᠡᠴᠢᠯᠡᠭᠰᠡᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_le)}
                             {renderDetail('ᠳᠡᠯᠡᠬᠡᠢ ᠭᠠᠯᠢᠭ᠋', entry.toli_we)}
-                            {renderDetail('ᠯᠠᠲ᠋ᠢᠨ ᠭᠠᠯᠢᠭ᠋', entry.toli_ijauur)}
-                            {renderDetail('ᠴᠣᠮᠣᠭ', entry.toli_uo)}
-                            {renderDetail('ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠤᠳᠬ᠎ᠠ', entry.toli_eo)}
-                            {renderDetail('ᠡᠰᠡᠷᠭᠦ ᠤᠳᠬ᠎ᠠ', entry.toli_to)}
+                            {renderDetail('ᠢᠵᠠᠭᠤᠷ', entry.toli_ijauur)}
+                            {renderDetail('ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠤᠳᠬ᠎ᠠ', entry.toli_uo)}
+                            {renderDetail('ᠡᠰᠡᠷᠭᠦ ᠤᠳᠬ᠎ᠠ', entry.toli_eo)}
+                            {renderDetail('ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠳᠦᠷᠰᠦ', entry.toli_to)}
                             {renderDetail('Zᠺᠣᠳ᠋', entry.z_code)}
                             {renderDetail('ᠲᠣᠳᠣ᠌', entry.toli_todo)}
-                            {renderDetail('ᠲᠠᠢᠯᠪᠤᠷᠢ', entry.toli_chmog)}
+                            {renderDetail('ᠴᠣᠮᠣᠭ', entry.toli_chmog)}
                         </div>
 
                         {entry.toli_chmog && (
                             <div className={styles.examples}>
-                                <strong>ᠣᠢᠷᠠᠯᠴᠠᠭ᠎ᠠ ᠳᠦᠷᠰᠦ</strong> {entry.toli_text}
+                                <strong>ᠲᠠᠢᠯᠪᠤᠷᠢ</strong> {entry.toli_text}
                             </div>
                         )}
                     </div>
