@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict wClkGRfXa0cYhgwzqFTcSlpG1IfYAC1I1epw310odmSF2u63qsSFfY1fAVcM3Kw
+\restrict UIJH4m8VW6nn45KDBGMX4x9gEMIj98Ixc8YBhYLNHReguiOn11JX3Hfm7nfeux2
 
 -- Dumped from database version 14.20 (Homebrew)
 -- Dumped by pg_dump version 14.20 (Homebrew)
@@ -22,40 +22,40 @@ SET row_security = off;
 -- Data for Name: DictionaryEntry; Type: TABLE DATA; Schema: public; Owner: dingnan
 --
 
-INSERT INTO public."DictionaryEntry" VALUES (1, 'ᠮᠣᠩᠭᠣᠯ', 'монгол', 'Mongolian', 'Mongolian', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Би монгол хүн. (I am Mongolian.)', '2025-12-20 10:22:55.815', '2025-12-20 10:22:55.815');
-INSERT INTO public."DictionaryEntry" VALUES (2, 'ᠰᠠᠢᠨ', 'сайн', 'good, well', 'good, well', NULL, NULL, 'adjective', NULL, NULL, NULL, NULL, 'Сайн байна уу? (How are you?)', '2025-12-20 10:22:55.833', '2025-12-20 10:22:55.833');
-INSERT INTO public."DictionaryEntry" VALUES (3, 'ᠪᠠᠢᠨᠠ', 'байна', 'to be, to exist', 'to be, to exist', NULL, NULL, 'verb', NULL, NULL, NULL, NULL, 'Энд байна. (It is here.)', '2025-12-20 10:22:55.834', '2025-12-20 10:22:55.834');
-INSERT INTO public."DictionaryEntry" VALUES (4, 'ᠨᠣᠮ', 'ном', 'book', 'book', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Энэ миний ном. (This is my book.)', '2025-12-20 10:22:55.835', '2025-12-20 10:22:55.835');
-INSERT INTO public."DictionaryEntry" VALUES (5, 'ᠬᠦᠮᠦᠨ', 'хүн', 'person, human', 'person, human', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Олон хүн ирсэн. (Many people came.)', '2025-12-20 10:22:55.836', '2025-12-20 10:22:55.836');
-INSERT INTO public."DictionaryEntry" VALUES (6, 'ᠭᠡᠷ', 'гэр', 'house, home, yurt', 'house, home, yurt', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Гэртээ байна. (I am at home.)', '2025-12-20 10:22:55.837', '2025-12-20 10:22:55.837');
-INSERT INTO public."DictionaryEntry" VALUES (7, 'ᠤᠰᠤ', 'ус', 'water', 'water', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Ус уух. (To drink water.)', '2025-12-20 10:22:55.838', '2025-12-20 10:22:55.838');
-INSERT INTO public."DictionaryEntry" VALUES (8, 'ᠮᠣᠷᠢ', 'морь', 'horse', 'horse', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Морь унах. (To ride a horse.)', '2025-12-20 10:22:55.839', '2025-12-20 10:22:55.839');
-INSERT INTO public."DictionaryEntry" VALUES (9, 'ᠲᠡᠩᠭᠡᠷᠢ', 'тэнгэр', 'sky, heaven', 'sky, heaven', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Тэнгэр цэлхий. (The sky is clear.)', '2025-12-20 10:22:55.84', '2025-12-20 10:22:55.84');
-INSERT INTO public."DictionaryEntry" VALUES (10, 'ᠭᠠᠵᠠᠷ', 'газар', 'earth, land, ground', 'earth, land, ground', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Газар дээр. (On the ground.)', '2025-12-20 10:22:55.841', '2025-12-20 10:22:55.841');
-INSERT INTO public."DictionaryEntry" VALUES (11, 'ᠠᠶᠤᠯ', 'аял', 'melody, tune', 'melody, tune', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Сайхан аялтай дуу. (A song with a beautiful melody.)', '2025-12-20 10:22:55.841', '2025-12-20 10:22:55.841');
-INSERT INTO public."DictionaryEntry" VALUES (12, 'ᠳᠤᠭᠤᠢ', 'дуу', 'song, sound, voice', 'song, sound, voice', NULL, NULL, 'noun', NULL, NULL, NULL, NULL, 'Дуу дуулах. (To sing a song.)', '2025-12-20 10:22:55.842', '2025-12-20 10:22:55.842');
-INSERT INTO public."DictionaryEntry" VALUES (13, 'ᠬᠠᠷᠠ', 'хар', 'black', 'black', NULL, NULL, 'adjective', NULL, NULL, NULL, NULL, 'Хар өнгө. (Black color.)', '2025-12-20 10:22:55.843', '2025-12-20 10:22:55.843');
-INSERT INTO public."DictionaryEntry" VALUES (14, 'ᠴᠠᠭᠠᠨ', 'цагаан', 'white', 'white', NULL, NULL, 'adjective', NULL, NULL, NULL, NULL, 'Цагаан өнгө. (White color.)', '2025-12-20 10:22:55.844', '2025-12-20 10:22:55.844');
-INSERT INTO public."DictionaryEntry" VALUES (15, 'ᠤᠯᠠᠭᠠᠨ', 'улаан', 'red', 'red', NULL, NULL, 'adjective', NULL, NULL, NULL, NULL, 'Улаан өнгө. (Red color.)', '2025-12-20 10:22:55.845', '2025-12-20 10:22:55.845');
+INSERT INTO public."DictionaryEntry" (toli_id, toli_m, toli_k, toli_ue, toli_we, toli_le, toli_aimag, toli_chmog, toli_ijauur, toli_uo, toli_eo, toli_to, z_code, toli_todo, toli_text, toli_image, toli_order, toli_del, toli_created, toli_modified, toli_sound) VALUES (1, 'ᠠ', 'а', 'a', 'a', 'a', 'ᠠᠶᠠᠯᠭ᠎ᠠ', 'ᠠ', 'ᠠ', NULL, NULL, NULL, 'ᡥᡧ', 'ᠠ', '1᠃ ᠮᠣᠩᠭᠣᠯ ᠰᠢᠨ᠎ᠡ ᠦᠰᠦᠭ ᠦ᠋ᠨ ᠴᠠᠭᠠᠨ ᠲᠣᠯᠣᠭᠠᠢ ᠶ᠋ᠢᠨ ᠡᠬᠢᠨ ᠦ᠌ ᠦᠰᠦᠭ;
+2᠃ ᠨᠢᠭᠡᠳᠦᠭᠡᠷ ᠭᠡᠰᠡᠨ ᠤᠳᠬ᠎ᠠ ᠶ᠋ᠢ ᠦᠰᠦᠭ ᠢ᠋ᠶ᠋ᠡᠷ ᠲᠡᠮᠳᠡᠭᠯᠡᠬᠦ ᠨᠢ᠄
+            ᠠᠷᠪᠠᠳᠤᠭᠠᠷ ᠵᠦᠢᠯ ᠦ᠋ᠨ ᠠ
+ᠠᠷᠪᠠᠳᠤᠭᠠᠷ ᠵᠦᠢᠯ ᠦ᠋ᠨ ᠨᠢᠭᠡᠳᠦᠭᠡᠷ ᠬᠡᠰᠡᠭ
+ᠲᠠᠪᠤ ᠶ᠋ᠢᠨ ᠠ ᠠᠩᠭᠢ
+ᠲᠠᠪᠤᠳᠤᠭᠠᠷ ᠠᠩᠭᠢ ᠶ᠋ᠢᠨ ᠡᠬᠢᠨ ᠦ᠌ ᠪᠦᠯᠦᠭ
+ᠠ ᠦᠰᠦᠭ ᠡᠷᠳᠡᠮ ᠦ᠋ᠨ ᠳᠡᠭᠡᠵᠢ᠂ ᠠᠶᠠᠭ᠎ᠠ ᠴᠠᠢ ᠢᠳᠡᠭᠡᠨ ᠦ᠌ ᠳᠡᠭᠡᠵᠢ
+ᠠ᠃ ᠦᠰᠦᠭ ᠪᠢᠴᠢᠭ ᠪᠣᠯ ᠡᠷᠳᠡᠮ ᠮᠡᠳᠡᠯᠭᠡ ᠡᠵᠡᠮᠰᠢᠬᠦ ᠡᠬᠢ ᠦᠨᠳᠦᠰᠦ; ᠪ᠃ ᠠᠯᠢᠪᠠ ᠠᠵᠢᠯ ᠦᠢᠯᠡᠰ ᠦ᠋ᠨ ᠡᠬᠢᠯᠡᠯ ᠭᠡᠰᠡᠨ ᠰᠠᠨᠠᠭ᠎ᠠ
+ᠠ ᠭᠡᠵᠦ ᠡᠷᠳᠡᠮ ᠰᠤᠷᠳᠠᠭ᠂ ᠠᠪᠤ ᠭᠡᠵᠦ ᠬᠡᠯᠡ ᠳ᠋ᠦ᠍ ᠣᠷᠣᠳᠠᠭ
+ᠡᠷᠳᠡᠮ ᠤᠬᠠᠭᠠᠨ ᠳ᠋ᠤ᠌ ᠰᠤᠷᠤᠯᠴᠠᠬᠤ᠂ ᠨᠡᠪᠲᠡᠷᠡᠬᠦ ᠲᠦᠯᠬᠢᠭᠦᠷ ᠨᠢ ᠪᠢᠴᠢᠭ ᠦᠰᠦᠭ ᠰᠤᠷᠬᠤ ᠶᠠᠪᠤᠳᠠᠯ ᠭᠡᠰᠡᠨ ᠰᠠᠨᠠᠭ᠎ᠠ
+ᠠ ᠦᠰᠦᠭ ᠦ᠋ᠨ ᠠᠴᠤᠭ ᠮᠡᠳᠡᠬᠦ ᠦᠭᠡᠢ᠂ ᠠᠷᠪᠠ ᠬᠦᠷᠲᠡᠯ᠎ᠡ ᠲᠣᠭ᠎ᠠ ᠮᠡᠳᠡᠬᠦ ᠦᠭᠡᠢ
+ᠦᠰᠦᠭ ᠪᠢᠴᠢᠭ ᠮᠡᠳᠡᠬᠦ ᠦᠭᠡᠢ᠂ ᠪᠢᠴᠢᠭ ᠦᠰᠦᠭ ᠦ᠋ᠨ ᠪᠣᠯᠪᠠᠰᠤᠷᠠᠯ ᠡᠵᠡᠮᠰᠢᠭᠡ ᠦᠭᠡᠢ ᠭᠡᠰᠡᠨ ᠰᠠᠨᠠᠭ᠎ᠠ
+ᠠ᠂ ᠮᠠ ᠦᠭᠡᠢ 
+ᠠ᠃ ᠪᠢᠴᠢᠭ ᠦᠰᠦᠭ ᠦᠯᠦ ᠮᠡᠳᠡᠬᠦ; ᠪ᠃ ᠶᠠᠷᠢᠶ᠎ᠠ ᠬᠥᠭᠡᠷᠦᠭᠡ ᠦᠭᠡᠢ᠂ ᠶᠠᠷᠢᠶ᠎ᠠ ᠮᠠᠭᠤ ᠲᠠᠢ ᠭᠡᠰᠡᠨ ᠰᠠᠨᠠᠭ᠎ᠠ
+ᠠ᠂ ᠠ᠋ ᠦᠭᠡᠢ 
+ᠠ᠃ ᠪᠢᠴᠢᠭ ᠦᠰᠦᠭ ᠣᠭᠲᠣ ᠮᠡᠳᠡᠬᠦ ᠦᠭᠡᠢ; ᠪ᠃ ᠶᠠᠷᠢᠶ᠎ᠠ ᠬᠥᠭᠡᠷᠦᠭᠡ ᠦᠭᠡᠢ᠂ ᠳᠤᠤᠭᠠᠢ; ᠸ᠃ ᠠᠳᠠᠷᠠᠮ᠎ᠠ ᠦᠭᠡᠢ᠂ ᠭᠦᠨᠳᠦᠦ ᠦᠭᠡᠢ; ᠲᠣᠮᠣᠭ᠎ᠠ ᠲᠠᠢ; ᠭ᠃ ᠦᠭᠡ ᠦᠰᠦᠭᠴᠢᠯᠡᠨ ᠪᠠᠭᠤᠯᠭᠠᠨ ᠪᠢᠴᠢᠬᠦ ᠭᠡᠰᠡᠨ ᠰᠠᠨᠠᠭ᠎ᠠ
+ᠠᠮᠠᠨ ᠳ᠋ᠤ᠌ ᠪᠠᠨ ᠠ ᠦᠭᠡᠢ᠂ ᠠᠯᠠᠭᠠᠨ ᠳ᠋ᠤ᠌ ᠪᠠᠨ ᠫᠠᠳ ᠦᠭᠡᠢ
+ᠡᠷᠳᠡᠮ ᠨᠣᠮ ᠦᠭᠡᠢ ᠭᠡᠰᠡᠨ ᠰᠠᠨᠠᠭ᠎ᠠ
+ᠠ ᠪᠠ ᠬᠠ
+ᠮᠣᠩᠭᠣᠯ ᠴᠠᠭᠠᠨ ᠲᠣᠯᠣᠭᠠᠢ ᠶ᠋ᠢᠨ ᠥᠭᠡᠷ᠎ᠡ ᠨᠡᠷ᠎ᠡ᠃ ᠵᠠᠷᠢᠮ ᠭᠠᠵᠠᠷ ᠲᠤ᠌ ᠮᠣᠩᠭᠣᠯ ᠴᠠᠭᠠᠨ ᠲᠣᠯᠣᠭᠠᠢ ᠶ᠋ᠢ 《ᠠ᠂ᠪᠠ᠂ᠬᠠ》 ᠭᠡᠬᠢ ᠳᠠᠷᠠᠭᠠᠯᠠᠯ ᠢ᠋ᠶ᠋ᠠᠷ ᠵᠢᠭᠰᠠᠭᠠᠵᠤ ᠪᠠᠢᠭᠰᠠᠨ ᠠ᠋ᠴᠠ ᠡᠢᠨ ᠨᠠᠷᠠᠯᠠᠪᠠ', NULL, NULL, NULL, '2026-01-25 01:02:22.774', '2026-01-25 01:02:22.795', 1);
+INSERT INTO public."DictionaryEntry" (toli_id, toli_m, toli_k, toli_ue, toli_we, toli_le, toli_aimag, toli_chmog, toli_ijauur, toli_uo, toli_eo, toli_to, z_code, toli_todo, toli_text, toli_image, toli_order, toli_del, toli_created, toli_modified, toli_sound) VALUES (2, 'ᠣᠷᠳᠣ', 'Орд', 'Ordo', 'ɔrd', 'Ord', 'ᠨᠡᠷ᠎ᠡ', 'ᠠ', 'ᠣᠷᠳᠣ', 'ᠣᠷᠳᠣᠨ', NULL, 'ᠤᠷᠢᠳᠤ', 'ᡥᡭᢞᢙᡳ', 'ᡆᠷᡑᡆ', '①ᠬᠠᠭᠠᠳ ᠨᠣᠶᠠᠳ ᠤ᠋ᠨ ᠣᠷᠣᠨ ᠰᠠᠭᠤᠴᠠ᠃ ②ᠣᠷᠣᠨ ᠰᠠᠭᠤᠴᠠ ᠶ᠋ᠢᠨ ᠬᠦᠨᠳᠦᠳᠬᠡᠯ ᠃ ③ ᠣᠯᠠᠨ ᠨᠡᠢᠲᠡ  ᠶ᠋ᠢᠨ ᠰᠣᠶᠣᠯ ᠂ ᠤᠷᠠᠯᠢᠭ ᠤ᠋ᠨ ᠴᠤᠭᠯᠠᠭᠠᠨ ᠤ᠋ ᠲᠣᠮᠣ ᠪᠠᠢᠰᠢᠩ ᠄ ᠰᠣᠶᠣᠯ ᠤ᠋ᠨ ᠣᠷᠳᠣᠨ ᠺᠢᠨᠣ᠋ ᠣᠷᠳᠣᠨ ᠃ ᠺᠢᠨᠣ᠋ ᠶ᠋ᠢᠨ ᠣᠷᠳᠣᠨ᠃ ④ ᠤᠯᠤᠰ ᠂ ᠣᠷᠣᠨ ᠤ᠋ ᠵᠠᠰᠠᠭ ᠤ᠋ᠨ ᠭᠠᠵᠠᠷ ᠪᠤᠶᠤ ᠲᠡᠭᠦᠨ ᠦ᠌ ᠠᠵᠢᠯᠯᠠᠬᠤ ᠪᠠᠢᠷᠢ ᠄ ᠵᠠᠰᠠᠭ  ᠤ᠋ᠨ ᠣᠷᠳᠣᠨ ᠤ᠋ ᠵᠠᠷᠯᠢᠭ ᠵᠠᠰᠠᠭ ᠤ᠋ᠨ ᠣᠷᠳᠣᠨ ᠤ᠋ ᠬᠣᠷᠢᠶ᠎ᠠ ᠃⑤ ᠤᠷᠲᠤᠴᠢ ᠪᠣᠷᠣ ᠵᠡᠷᠭᠡ ᠬᠤᠯᠤᠭᠠᠨ᠎ᠠ ᠨᠤᠭᠤᠳ ᠤ᠋ᠨ ᠢᠳᠡᠰᠢ ᠭᠦᠶᠦᠭᠡ ᠬᠤᠷᠢᠶᠠᠬᠤ ᠨᠦᠬᠡ ᠃ ⑥ᠡᠷᠦᠳᠡᠰᠦ ᠶ᠋ᠢᠨ ᠣᠷᠣᠰᠢᠬᠤ ᠬᠡᠪᠲᠡᠰᠢ ᠂ ᠠᠭᠤᠷᠬᠠᠢ᠄ ᠠᠯᠲᠠᠨ  ᠤ᠋ ～︔ ᠨᠡᠭᠦᠷᠡᠰᠦᠨ ᠦ᠌ ～᠃', NULL, NULL, NULL, '2026-01-25 01:02:22.798', '2026-01-25 01:02:22.8', 2);
+INSERT INTO public."DictionaryEntry" (toli_id, toli_m, toli_k, toli_ue, toli_we, toli_le, toli_aimag, toli_chmog, toli_ijauur, toli_uo, toli_eo, toli_to, z_code, toli_todo, toli_text, toli_image, toli_order, toli_del, toli_created, toli_modified, toli_sound) VALUES (3, 'ᠤᠷᠲᠤ', 'Урт', 'Urtu', 'ʊrt', 'Urt', 'ᠲᠡᠮᠳᠡᠭ', 'ᠠ', 'ᠤᠷᠲᠤ', 'ᠤᠳᠠᠭᠠᠨ', 'ᠣᠬᠣᠷ', 'ᠤᠷᠢᠳᠤ', 'ᡥᡭᢞᢙᡳ', 'ᡇᠷᡐᡇ', '①ᠬᠡᠪᠲᠡᠭᠡ ᠶᠠᠭᠤᠮᠠᠨ ᠤ᠋ ᠬᠣᠶᠠᠷ ᠦᠵᠦᠭᠦᠷ ᠦ᠋ᠨ ᠬᠣᠭᠣᠷᠣᠨᠳᠣᠬᠢ ᠵᠠᠢ ᠶᠡᠬᠡ᠄ ～ᠮᠣᠳᠣ ︔～ᠳᠡᠭᠡᠰᠦ ︔～ᠵᠠᠮ᠃ ②ᠤᠷᠲᠤ ᠶ᠋ᠢᠨ ᠬᠡᠮᠵᠢᠶ᠎ᠡ᠄ ～ ᠪᠡᠷ ᠢ᠋ᠶ᠋ᠡᠨ ᠲᠠᠪᠤᠨ ᠲᠣᠬᠣᠢ ᠃③ᠴᠠᠭ ᠬᠤᠭᠤᠴᠠᠭ᠎ᠠ ᠨᠢ ᠤᠳᠠᠭᠠᠨ᠄ ～ᠨᠠᠰᠤᠯᠠᠬᠤ︔～ᠥᠭᠦᠯᠡᠯ᠃', NULL, NULL, NULL, '2026-01-25 01:02:22.802', '2026-01-25 01:02:22.803', 3);
 
 
 --
--- Data for Name: _prisma_migrations; Type: TABLE DATA; Schema: public; Owner: dingnan
+-- Name: DictionaryEntry_toli_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dingnan
 --
 
-INSERT INTO public._prisma_migrations VALUES ('fe0474c6-bade-4598-adb3-5a6ecf059f90', 'ead307b9f00958ffb7b79ab3b6a95511e333095425f28660c229b97dd29c66f5', '2025-12-20 05:13:56.844443-05', '20251220101356_add_linguistic_fields', NULL, NULL, '2025-12-20 05:13:56.841469-05', 1);
-
-
---
--- Name: DictionaryEntry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: dingnan
---
-
-SELECT pg_catalog.setval('public."DictionaryEntry_id_seq"', 15, true);
+SELECT pg_catalog.setval('public."DictionaryEntry_toli_id_seq"', 3, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict wClkGRfXa0cYhgwzqFTcSlpG1IfYAC1I1epw310odmSF2u63qsSFfY1fAVcM3Kw
+\unrestrict UIJH4m8VW6nn45KDBGMX4x9gEMIj98Ixc8YBhYLNHReguiOn11JX3Hfm7nfeux2
 
