@@ -67,6 +67,74 @@
   animation: fadeIn 1s ease-out 0.2s backwards;
 }
 
+.demoSection {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.demoTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.demoDescription {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.demoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.demoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(161, 161, 170, 0.2);
+  border-radius: var(--radius-md);
+  background: rgba(19, 19, 26, 0.8);
+}
+
+.demoSearches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.demoWord {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.demoWord:hover {
+  color: #a5b4fc;
+}
+
+.mongolianWord {
+  font-size: 1.6rem;
+}
+
+.demoRomanization {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
 @media (max-width: 768px) {
   .main {
     padding: 1.5rem 1rem;
@@ -82,5 +150,25 @@
 
   .heroSubtitle {
     font-size: 1rem;
+  }
+
+  .demoGrid {
+    gap: 0.5rem;
+  }
+
+  .demoCard {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .demoSearches {
+    gap: 0.5rem;
+  }
+
+  .demoWord {
+    font-size: 1.2rem;
+  }
+
+  .mongolianWord {
+    font-size: 1.4rem;
   }
 }

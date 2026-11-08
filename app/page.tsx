@@ -32,7 +32,13 @@ interface DictionaryEntry {
 }
 
 export default function Home() {
+  const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState<DictionaryEntry[]>([]);
+  const demoEntries = [
+    { mongolian: 'ᠠ', cyrillic: 'а', romanization: 'a' },
+    { mongolian: 'ᠣᠷᠳᠣ', cyrillic: 'Орд', romanization: 'Ordo' },
+    { mongolian: 'ᠤᠷᠲᠤ', cyrillic: 'Урт', romanization: 'Urtu' },
+  ];
 
   return (
     <div className={styles.page}>
@@ -47,12 +53,42 @@ export default function Home() {
           </p>
         </div>
         <div className={styles.searchSection}>
-          <SearchBar onResults={setSearchResults} />
+          <SearchBar query={query} onQueryChange={setQuery} onResults={setSearchResults} />
         </div>
+        <section className={styles.demoSection} aria-labelledby="demo-title">
+          <h2 id="demo-title" className={styles.demoTitle}>Try one of the 3 demo entries</h2>
+          <p className={styles.demoDescription}>
+            Click a word to search by Cyrillic or Traditional Mongolian. Romanization is shown for reference.
+          </p>
+          <div className={styles.demoGrid}>
+            {demoEntries.map((entry) => (
+              <article className={styles.demoCard} key={entry.cyrillic}>
+                <div className={styles.demoSearches}>
+                  <button
+                    className={styles.demoWord}
+                    type="button"
+                    onClick={() => setQuery(entry.cyrillic)}
+                    aria-label={`Search for ${entry.cyrillic} in Cyrillic`}
+                  >
+                    {entry.cyrillic}
+                  </button>
+                  <button
+                    className={`${styles.demoWord} ${styles.mongolianWord}`}
+                    type="button"
+                    onClick={() => setQuery(entry.mongolian)}
+                    aria-label={`Search for ${entry.mongolian} in Traditional Mongolian`}
+                  >
+                    {entry.mongolian}
+                  </button>
+                </div>
+                <span className={styles.demoRomanization}>{entry.romanization}</span>
+              </article>
+            ))}
+          </div>
+        </section>
         <SearchResults results={searchResults} />
       </main>
       <Footer />
     </div>
   );
 }
-

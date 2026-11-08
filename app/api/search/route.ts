@@ -25,12 +25,6 @@ export async function GET(request: NextRequest) {
                             contains: query,
                         },
                     },
-                    {
-                        toli_text: {
-                            contains: query,
-                            mode: 'insensitive',
-                        },
-                    },
                 ],
             },
             take: 10,

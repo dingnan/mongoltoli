@@ -28,11 +28,12 @@ interface DictionaryEntry {
 }
 
 interface SearchBarProps {
+    query: string;
+    onQueryChange: (query: string) => void;
     onResults: (results: DictionaryEntry[]) => void;
 }
 
-export default function SearchBar({ onResults }: SearchBarProps) {
-    const [query, setQuery] = useState('');
+export default function SearchBar({ query, onQueryChange, onResults }: SearchBarProps) {
     const [isLoading, setIsLoading] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
     const [results, setResults] = useState<DictionaryEntry[]>([]);
@@ -103,7 +104,7 @@ export default function SearchBar({ onResults }: SearchBarProps) {
 
     const handleResultClick = (result: DictionaryEntry) => {
         isSelectingItem.current = true;
-        setQuery(result.toli_k);
+        onQueryChange(result.toli_k);
         setShowDropdown(false);
         onResults([result]);
 
@@ -137,7 +138,7 @@ export default function SearchBar({ onResults }: SearchBarProps) {
                     className={styles.searchInput}
                     placeholder="Search in Cyrillic or Mongolian..."
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={(e) => onQueryChange(e.target.value)}
                     onFocus={(e) => {
                         e.target.select(); // Auto-select all text
                         results.length > 0 && setShowDropdown(true);
